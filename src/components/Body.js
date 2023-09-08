@@ -27,7 +27,7 @@ const Body = ({ todos, deleteTodo, updateTodoCheck }) => {
         <>
           <td>{idx + 1}</td>
           <td>{todo.title}</td>
-          <td>{todo.content}</td>
+          <td style={{ whiteSpace: "pre-line" }}>{todo.content}</td>
           <td>{todo.date}</td>
         </>
       );
@@ -41,7 +41,7 @@ const Body = ({ todos, deleteTodo, updateTodoCheck }) => {
         <td>
           <del>{todo.title}</del>
         </td>
-        <td>
+        <td style={{ whiteSpace: "pre-line" }}>
           <del>{todo.content}</del>
         </td>
         <td>
@@ -65,7 +65,7 @@ const Body = ({ todos, deleteTodo, updateTodoCheck }) => {
       </thead>
       <tbody>
         {outputTodos.map((todo, idx) => (
-          <tr key={idx + 1}>
+          <tr key={idx}>
             {checkData(todo) ? (
               <td>
                 <div className="form-check-inline">
